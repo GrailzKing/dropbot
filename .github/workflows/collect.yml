@@ -1,10 +1,12 @@
-
 name: Collect Drops
 
 on:
   schedule:
-    - cron: '0 */4 * * *'   # every 4 hours
-  workflow_dispatch:          # manual trigger from GitHub UI
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   collect:
